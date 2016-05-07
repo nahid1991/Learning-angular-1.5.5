@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="">
+<head>
+	<meta charset="UTF-8">
+	<title>AngularJS | Welcome</title>
+	<script src = "./node_modules/angular/angular.min.js"></script>
+</head>
+<body>
+	<input type="text" ng-model="name"></input>
+	<div>
+		<h1><strong data-ng-bind="name"></strong></h1>
+	</div>
+	<br/>
+	<div ng-init="myfavLan=[{name:'PHP', extension:'.php'},
+		{name:'JavaScript', extension:'.js'},{name:'C++', extension:'.cpp'},
+		{name:'Ruby', extension:'.rb'}]">
+		<p ng-repeat="language in myfavLan">
+			Name: {{ language.name }}<br/>
+			Extension: {{ language.extension }}<br/>
+		</p>
+	</div>
+</body>
+</html>
